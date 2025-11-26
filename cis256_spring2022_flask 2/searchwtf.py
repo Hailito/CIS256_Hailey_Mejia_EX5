@@ -20,6 +20,6 @@ class ByPublisherIdWTF(FlaskForm):
     publisher_choice = SelectField("PublisherChoice", choices=publishers)
 
 class ByTitleWTF(FlaskForm):
+    title = StringField("Enter Part or all of a Title")
     # This will also need a stringfield for the words the user types
     pass
-

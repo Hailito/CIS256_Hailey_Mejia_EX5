@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login with WTF</title>
+</head>
+<body>
+<form method="post" action="/results/booksbytitle">
+    {{form.csrf_token}}
+    {{form.title}}
+    <br />
+    {% if form.errors %}
+    <p> {{form.errors.items()}}</p>
+
+    {% endif %}
+    <input type="submit" name="submitted" value="Get Books with That Title!"/>
+
+</form>
+
+</body>
+</html>
