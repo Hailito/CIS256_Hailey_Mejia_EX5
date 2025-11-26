@@ -17,7 +17,7 @@ class ByAuthorIdWTF(FlaskForm):
 class ByPublisherIdWTF(FlaskForm):
     mydb = BooksDB()
     publishers = mydb.getpublishers()
-    publisher_choice = SelectField("AuthorChoice", choices=publishers)
+    publisher_choice = SelectField("PublisherChoice", choices=publishers)
 
 class ByTitleWTF(FlaskForm):
     # This will also need a stringfield for the words the user types
